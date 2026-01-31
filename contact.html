@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Darkrush Studios - Get in touch for Minecraft and Roblox development projects">
+    <title>Contact Us - Darkrush Studios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Darkrush.png" alt="Darkrush Studios" style="height: 40px; width: 40px; margin-right: 10px; border-radius: 8px;">
+                <span>Darkrush Studios</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="minecraft.html">Minecraft</a></li>
+                <li><a href="roblox.html">Roblox</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"><span id="themeIcon">◐</span></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div style="margin-bottom: 2rem;">
+                <img src="Darkrush.png" alt="Darkrush Studios Logo" style="max-width: 120px; height: auto; border-radius: 8px;">
+            </div>
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you. Our team is ready to discuss your gaming project.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="page-content" id="main-content">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:darkrush.studios@gmail.com">darkrush.studios@gmail.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h3>💬 Discord</h3>
+                        <p><a href="https://discord.gg/HwQGKbAFpS" target="_blank">Join Our Discord Server</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h3>🐦 Twitter</h3>
+                        <p><a href="#" target="_blank">@GamingDevTeam</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📞 Response Time</h3>
+                        <p>We typically respond within 24 hours</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjgrdpkk" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Type</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="minecraft">Minecraft Development</option>
+                            <option value="roblox">Roblox Development</option>
+                            <option value="both">Both Services</option>
+                            <option value="other">Other Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+                    <div id="formMessage" style="margin-top: 1rem; text-align: center; display: none;"></div>
+                </form>
+            </div>
+
+            <div class="faq-section" style="margin-top: 80px;">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>What's your typical project timeline?</h3>
+                    <p>Project timelines vary based on scope and complexity. We'll provide a detailed estimate during our consultation. Most projects range from 2-12 weeks.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer maintenance and support?</h3>
+                    <p>Yes! We provide ongoing support packages including bug fixes, updates, and optimization for both Minecraft and Roblox projects.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's your pricing model?</h3>
+                    <p>We offer flexible pricing options including fixed-rate projects, hourly consulting, and maintenance packages. Contact us for a custom quote.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can you work with existing projects?</h3>
+                    <p>Absolutely! We can help enhance, optimize, or complete existing Minecraft servers and Roblox games.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do you ensure project confidentiality?</h3>
+                    <p>We take confidentiality seriously and are happy to sign NDAs. Your project details and intellectual property are fully protected.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's your experience level?</h3>
+                    <p>Our team has 5+ years of experience with hundreds of successful projects across both Minecraft and Roblox platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Darkrush Studios. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://discord.gg/HwQGKbAFpS" target="_blank">Discord</a>
+                <a href="https://www.instagram.com/darkrush_studio/" target="_blank">Instagram</a>
+                <a href="#" target="_blank">YouTube</a>
+                <a href="#" target="_blank">Reddit</a>
+                <a href="#" target="_blank">TikTok</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
