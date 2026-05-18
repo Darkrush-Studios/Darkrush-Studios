@@ -477,36 +477,5 @@
     footer { padding: 2rem 1.5rem; }
     .games-grid { grid-template-columns: 1fr; }
   }
-.partners-scroll-container {
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  padding-bottom: 1rem;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  border-bottom: 1px solid rgba(124, 90, 237, 0.15);
-  margin-top: 2rem;
-}
 
-.partners-grid {
-  display: inline-flex;
-  gap: 1.5rem;
-}
-
-.partner-card {
-  flex: 0 0 auto;
-  width: 220px;
-  background: var(--bg2);
-  border: 1px solid rgba(124, 90, 237, 0.15);
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  transition: transform 0.3s, border-color 0.3s;
-  color: var(--text);
-}
-
-.partner-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(124, 90, 237, 0.45);
-}
 
