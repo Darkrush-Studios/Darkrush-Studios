@@ -477,41 +477,25 @@
     footer { padding: 2rem 1.5rem; }
     .games-grid { grid-template-columns: 1fr; }
   }
-#partners {
-  padding: 6rem 3rem;
-  max-width: 1100px;
-  margin: 0 auto 4rem auto;
-  color: var(--text);
-}
-
-#partners .section-label {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--purple-light);
-  margin-bottom: 0.8rem;
-}
-
-#partners .section-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1;
-  color: var(--text);
-  margin-bottom: 2rem;
-  letter-spacing: 0.02em;
-}
-
-#partners .section-title span {
-  color: var(--purple-light);
+.partners-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  border-bottom: 1px solid rgba(124, 90, 237, 0.15);
+  margin-top: 2rem;
 }
 
 .partners-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  display: inline-flex;
+  gap: 1.5rem;
 }
 
 .partner-card {
+  flex: 0 0 auto;
+  width: 220px;
   background: var(--bg2);
   border: 1px solid rgba(124, 90, 237, 0.15);
   border-radius: 16px;
@@ -526,15 +510,3 @@
   border-color: rgba(124, 90, 237, 0.45);
 }
 
-.partner-card h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.8rem;
-  color: var(--purple-light);
-}
-
-.partner-card p {
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.5;
-}
