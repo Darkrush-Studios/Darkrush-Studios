@@ -156,54 +156,57 @@ Darkrush Studios
     </div>
   </div>
 </div>
-<div class="partners-container" id="partnersContainer">
+<section id="partners">
+  <p class="section-label">Our Partners</p>
+  <h2 class="section-title">Trusted <span>Partners</span></h2>
 
-  <a href="https://example1.com" target="_blank" class="partner">
-    <img src="partner1.png" alt="">
-    <span>Partner 1</span>
-  </a>
+  <div class="partners-container" id="partners">
 
-  <a href="https://example2.com" target="_blank" class="partner">
-    <img src="partner2.png" alt="">
-    <span>Partner 2</span>
-  </a>
+    <a href="#" class="partner">
+      <img src="logo.webp">
+      <p>Partner 1</p>
+    </a>
 
-  <a href="https://example3.com" target="_blank" class="partner">
-    <img src="partner3.png" alt="">
-    <span>Partner 3</span>
-  </a>
+    <a href="#" class="partner">
+      <img src="logo.webp">
+      <p>Partner 2</p>
+    </a>
 
-  <a href="https://example4.com" target="_blank" class="partner">
-    <img src="partner4.png" alt="">
-    <span>Partner 4</span>
-  </a>
+    <a href="#" class="partner">
+      <img src="logo.webp">
+      <p>Partner 3</p>
+    </a>
 
-</div>
+    <a href="#" class="partner">
+      <img src="logo.webp">
+      <p>Partner 4</p>
+    </a>
 
+  </div>
+</section>
 <script>
-const container = document.getElementById("partnersContainer");
+const container = document.getElementById("partners");
 
-function scrollPartners() {
-  const first = container.firstElementChild;
+function moveOne() {
+  const first = container.children[0];
 
-  // ✅ GET ACTUAL WIDTH (card + gap)
-  const style = window.getComputedStyle(first);
-  const width = first.offsetWidth + parseInt(style.marginRight || 20);
+  // get exact width (card + gap)
+  const style = getComputedStyle(first);
+  const width = first.offsetWidth + 20; // matches gap
 
-  // move container
-  container.style.transition = "transform 0.6s linear";
+  container.style.transition = "transform 0.5s ease";
   container.style.transform = `translateX(-${width}px)`;
 
   setTimeout(() => {
     container.appendChild(first);
     container.style.transition = "none";
     container.style.transform = "translateX(0)";
-  }, 600);
+  }, 500);
 }
 
-setInterval(scrollPartners, 2000);
+setInterval(moveOne, 2000);
 </script>
-``
+
 
 <footer>
   <div>
