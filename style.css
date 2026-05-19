@@ -524,36 +524,38 @@
   background: rgba(124,90,237,0.15);
   color: var(--purple-light);
 }
-/* Wrapper controls visible area */
 .partners-wrapper {
-  height: 180px;
   overflow: hidden;
-  position: relative;
+  width: 100%;
   margin-top: 2rem;
 }
 
-/* Track moves */
+/* scrolling row */
 .partners-track {
   display: flex;
-  flex-direction: column;
-  animation: scrollUp 12s linear infinite;
+  width: max-content;
+  animation: scrollX 15s linear infinite;
 }
 
-/* Each partner */
+/* individual cards */
 .partner {
+  min-width: 200px;
+  margin-right: 20px;
   padding: 20px;
   text-align: center;
-  border-bottom: 1px solid rgba(124,90,237,0.1);
   background: var(--bg2);
+  border: 1px solid rgba(124,90,237,0.15);
+  border-radius: 10px;
   color: var(--purple-light);
+  flex-shrink: 0;
 }
 
-/* KEY FIX: correct animation distance */
-@keyframes scrollUp {
+/* smooth horizontal movement */
+@keyframes scrollX {
   0% {
-    transform: translateY(0%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateY(-50%);
+    transform: translateX(-50%);
   }
 }
