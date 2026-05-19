@@ -524,21 +524,34 @@
   background: rgba(124,90,237,0.15);
   color: var(--purple-light);
 }
-.partners-container {
-  display: flex;
-  gap: 20px;
-  overflow: hidden;
-  width: 100%;
-  margin-top: 2rem;
-}
-
 .partner {
   min-width: 180px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   background: var(--bg2);
   border: 1px solid rgba(124,90,237,0.15);
   border-radius: 10px;
+
   color: var(--purple-light);
-  flex-shrink: 0;
+  text-decoration: none; /* remove underline */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* image styling */
+.partner img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* hover effect */
+.partner:hover {
+  border-color: var(--purple-light);
+  transform: translateY(-3px);
+  transition: 0.2s;
 }
