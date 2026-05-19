@@ -167,7 +167,27 @@ Darkrush Studios
     <div class="partner">Partner 4</div>
   </div>
 </section>
+<script>
+const container = document.getElementById("partnersContainer");
 
+function scrollPartners() {
+  // move first item to the end
+  const first = container.firstElementChild;
+
+  // animate movement
+  container.style.transition = "transform 0.6s linear";
+  container.style.transform = "translateX(-200px)";
+
+  setTimeout(() => {
+    container.appendChild(first);
+    container.style.transition = "none";
+    container.style.transform = "translateX(0)";
+  }, 600);
+}
+
+// repeat every 2 seconds
+setInterval(scrollPartners, 2000);
+</script>
 
 <footer>
   <div>
