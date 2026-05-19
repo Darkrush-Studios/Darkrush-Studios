@@ -160,55 +160,56 @@ Darkrush Studios
   <p class="section-label">Our Partners</p>
   <h2 class="section-title">Trusted <span>Partners</span></h2>
 
- <div class="partners-container">
-  <div class="partners-track" id="partnersTrack">
+  <div class="partners-container">
+    <div class="partners-track" id="partnersTrack">
 
-    https://example.com
-      logo.webp
-      <p>Partner 1</p>
-    </a>
+      <a href="#" class="partner">
+        <img src="logo.webp" alt="">
+        <p>Partner 1</p>
+      </a>
 
-    https://example.com
-      logo.webp
-      <p>Partner 2</p>
-    </a>
+      <a href="#" class="partner">
+        <img src="logo.webp" alt="">
+        <p>Partner 2</p>
+      </a>
 
-    https://example.com
-      logo.webp
-      <p>Partner 3</p>
-    </a>
+      <a href="#" class="partner">
+        <img src="logo.webp" alt="">
+        <p>Partner 3</p>
+      </a>
 
-    https://example.com
-      logo.webp
-      <p>Partner 4</p>
-    </a>
+      <a href="#" class="partner">
+        <img src="logo.webp" alt="">
+        <p>Partner 4</p>
+      </a>
 
+    </div>
   </div>
-</div>
 </section>
+
 <script>
 const track = document.getElementById("partnersTrack");
 
-// duplicate items so it loops smoothly
+// duplicate for infinite loop
 track.innerHTML += track.innerHTML;
 
-let pos = 0;
+let position = 0;
 
-function animate() {
-  pos -= 0.5; // speed (lower = smoother)
+function smoothScroll() {
+  position -= 0.4; // speed (lower = smoother)
 
-  // reset when halfway
-  if (Math.abs(pos) >= track.scrollWidth / 2) {
-    pos = 0;
+  if (Math.abs(position) >= track.scrollWidth / 2) {
+    position = 0;
   }
 
-  track.style.transform = `translateX(${pos}px)`;
+  track.style.transform = `translateX(${position}px)`;
 
-  requestAnimationFrame(animate);
+  requestAnimationFrame(smoothScroll);
 }
 
-animate();
+smoothScroll();
 </script>
+
 <footer>
   <div>
     <a href="#">Darkrush Studios</a> &nbsp;·&nbsp; Games &amp; Games Development Community
