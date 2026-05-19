@@ -524,32 +524,43 @@
   background: rgba(124,90,237,0.15);
   color: var(--purple-light);
 }
-.partners-container {
+/* HARD RESET (prevents nav styles breaking it) */
+#partners .partners-track {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+#partners .partners-container {
   overflow: hidden;
   width: 100%;
-  margin-top: 2rem;
 }
 
-.partners-track {
-  display: flex;
+/* row spacing */
+#partners .partners-track {
   gap: 20px;
+  will-change: transform;
 }
 
-.partner {
-  min-width: 180px;
+/* cards */
+#partners .partner {
+  flex: 0 0 auto !important; /* prevents shrinking / stacking */
+  width: 180px;
+
   padding: 15px;
   background: var(--bg2);
+  border: 1px solid rgba(124,90,237,0.15);
   border-radius: 10px;
 
+  text-align: center;
   text-decoration: none;
   color: var(--purple-light);
-
-  flex-shrink: 0;
-  text-align: center;
 }
 
-.partner img {
+/* images */
+#partners .partner img {
   width: 60px;
   height: 60px;
-  margin-bottom: 8px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 8px;
 }
