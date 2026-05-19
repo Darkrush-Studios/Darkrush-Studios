@@ -156,45 +156,43 @@ Darkrush Studios
     </div>
   </div>
 </div>
-<section id="partners">
-  <p class="section-label">Our Partners</p>
-  <h2 class="section-title">Trusted <span>Partners</span></h2>
+<div class="partners-container" id="partnersContainer">
 
-  <div class="partners-container" id="partnersContainer">
+  <a href="https://example1.com" target="_blank" class="partner">
+    <img src="partner1.png" alt="">
+    <span>Partner 1</span>
+  </a>
 
-    <a href="https://example1.com" class="partner" target="_blank">
-      <img src="partner1.png" alt="Partner 1">
-      <span>Partner 1</span>
-    </a>
+  <a href="https://example2.com" target="_blank" class="partner">
+    <img src="partner2.png" alt="">
+    <span>Partner 2</span>
+  </a>
 
-    <a href="https://example2.com" class="partner" target="_blank">
-      <img src="partner2.png" alt="Partner 2">
-      <span>Partner 2</span>
-    </a>
+  <a href="https://example3.com" target="_blank" class="partner">
+    <img src="partner3.png" alt="">
+    <span>Partner 3</span>
+  </a>
 
-    <a href="https://example3.com" class="partner" target="_blank">
-      <img src="partner3.png" alt="Partner 3">
-      <span>Partner 3</span>
-    </a>
+  <a href="https://example4.com" target="_blank" class="partner">
+    <img src="partner4.png" alt="">
+    <span>Partner 4</span>
+  </a>
 
-    <a href="https://example4.com" class="partner" target="_blank">
-      <img src="partner4.png" alt="Partner 4">
-      <span>Partner 4</span>
-    </a>
+</div>
 
-  </div>
-</section>
-``
 <script>
 const container = document.getElementById("partnersContainer");
 
 function scrollPartners() {
-  // move first item to the end
   const first = container.firstElementChild;
 
-  // animate movement
+  // ✅ GET ACTUAL WIDTH (card + gap)
+  const style = window.getComputedStyle(first);
+  const width = first.offsetWidth + parseInt(style.marginRight || 20);
+
+  // move container
   container.style.transition = "transform 0.6s linear";
-  container.style.transform = "translateX(-200px)";
+  container.style.transform = `translateX(-${width}px)`;
 
   setTimeout(() => {
     container.appendChild(first);
@@ -203,9 +201,9 @@ function scrollPartners() {
   }, 600);
 }
 
-// repeat every 2 seconds
 setInterval(scrollPartners, 2000);
 </script>
+``
 
 <footer>
   <div>
