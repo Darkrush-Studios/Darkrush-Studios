@@ -160,54 +160,55 @@ Darkrush Studios
   <p class="section-label">Our Partners</p>
   <h2 class="section-title">Trusted <span>Partners</span></h2>
 
-  <div class="partners-container" id="partners">
+ <div class="partners-container">
+  <div class="partners-track" id="partnersTrack">
 
-    <a href="#" class="partner">
-      <img src="logo.webp">
+    https://example.com
+      logo.webp
       <p>Partner 1</p>
     </a>
 
-    <a href="#" class="partner">
-      <img src="logo.webp">
+    https://example.com
+      logo.webp
       <p>Partner 2</p>
     </a>
 
-    <a href="#" class="partner">
-      <img src="logo.webp">
+    https://example.com
+      logo.webp
       <p>Partner 3</p>
     </a>
 
-    <a href="#" class="partner">
-      <img src="logo.webp">
+    https://example.com
+      logo.webp
       <p>Partner 4</p>
     </a>
 
   </div>
+</div>
 </section>
 <script>
-const container = document.getElementById("partners");
+const track = document.getElementById("partnersTrack");
 
-function moveOne() {
-  const first = container.children[0];
+// duplicate items so it loops smoothly
+track.innerHTML += track.innerHTML;
 
-  // get exact width (card + gap)
-  const style = getComputedStyle(first);
-  const width = first.offsetWidth + 20; // matches gap
+let pos = 0;
 
-  container.style.transition = "transform 0.5s ease";
-  container.style.transform = `translateX(-${width}px)`;
+function animate() {
+  pos -= 0.5; // speed (lower = smoother)
 
-  setTimeout(() => {
-    container.appendChild(first);
-    container.style.transition = "none";
-    container.style.transform = "translateX(0)";
-  }, 500);
+  // reset when halfway
+  if (Math.abs(pos) >= track.scrollWidth / 2) {
+    pos = 0;
+  }
+
+  track.style.transform = `translateX(${pos}px)`;
+
+  requestAnimationFrame(animate);
 }
 
-setInterval(moveOne, 2000);
+animate();
 </script>
-
-
 <footer>
   <div>
     <a href="#">Darkrush Studios</a> &nbsp;·&nbsp; Games &amp; Games Development Community
