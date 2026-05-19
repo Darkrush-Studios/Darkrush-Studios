@@ -478,4 +478,8 @@
     .games-grid { grid-template-columns: 1fr; }
   }
 
-
+.team-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
