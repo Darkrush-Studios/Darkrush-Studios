@@ -524,3 +524,36 @@
   background: rgba(124,90,237,0.15);
   color: var(--purple-light);
 }
+.partners-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid rgba(124,90,237,0.1);
+  border-bottom: 1px solid rgba(124,90,237,0.1);
+}
+
+.partners-track {
+  display: flex;
+  flex-direction: column;
+  animation: scrollPartners 10s linear infinite;
+}
+
+.partner {
+  padding: 20px;
+  text-align: center;
+  background: var(--bg2);
+  border-bottom: 1px solid rgba(124,90,237,0.1);
+  font-weight: 500;
+  color: var(--purple-light);
+}
+
+/* animation */
+@keyframes scrollPartners {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+``
