@@ -525,10 +525,14 @@
   color: var(--purple-light);
 }
 .partners-container {
-  display: flex;
   overflow: hidden;
-  gap: 20px;
+  width: 100%;
   margin-top: 2rem;
+}
+
+.partners-track {
+  display: flex;
+  gap: 20px;
 }
 
 .partner {
@@ -536,17 +540,16 @@
   padding: 15px;
   background: var(--bg2);
   border-radius: 10px;
-  text-align: center;
 
   text-decoration: none;
   color: var(--purple-light);
 
   flex-shrink: 0;
+  text-align: center;
 }
 
 .partner img {
   width: 60px;
   height: 60px;
-  object-fit: contain;
   margin-bottom: 8px;
 }
