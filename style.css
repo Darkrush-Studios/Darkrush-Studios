@@ -524,34 +524,38 @@
   background: rgba(124,90,237,0.15);
   color: var(--purple-light);
 }
-.partners-wrapper {
+.partners {
   overflow: hidden;
   width: 100%;
+  position: relative;
   margin-top: 2rem;
 }
 
-/* scrolling row */
-.partners-track {
-  display: flex;
-  width: max-content;
-  animation: scrollX 15s linear infinite;
+/* FORCE it NOT to inherit nav flex rules */
+.partners-slide {
+  display: inline-block;
+  white-space: nowrap;
+
+  /* animation */
+  animation: scroll 20s linear infinite;
 }
 
-/* individual cards */
+/* each partner */
 .partner {
-  min-width: 200px;
-  margin-right: 20px;
+  display: inline-block;
+  width: 180px;
+  margin: 0 10px;
   padding: 20px;
+
   text-align: center;
   background: var(--bg2);
   border: 1px solid rgba(124,90,237,0.15);
   border-radius: 10px;
   color: var(--purple-light);
-  flex-shrink: 0;
 }
 
-/* smooth horizontal movement */
-@keyframes scrollX {
+/* important animation */
+@keyframes scroll {
   0% {
     transform: translateX(0);
   }
