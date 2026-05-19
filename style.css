@@ -524,42 +524,21 @@
   background: rgba(124,90,237,0.15);
   color: var(--purple-light);
 }
-.partners {
+.partners-container {
+  display: flex;
+  gap: 20px;
   overflow: hidden;
   width: 100%;
-  position: relative;
   margin-top: 2rem;
 }
 
-/* FORCE it NOT to inherit nav flex rules */
-.partners-slide {
-  display: inline-block;
-  white-space: nowrap;
-
-  /* animation */
-  animation: scroll 20s linear infinite;
-}
-
-/* each partner */
 .partner {
-  display: inline-block;
-  width: 180px;
-  margin: 0 10px;
+  min-width: 180px;
   padding: 20px;
-
   text-align: center;
   background: var(--bg2);
   border: 1px solid rgba(124,90,237,0.15);
   border-radius: 10px;
   color: var(--purple-light);
-}
-
-/* important animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  flex-shrink: 0;
 }
